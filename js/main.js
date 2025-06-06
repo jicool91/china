@@ -31,3 +31,20 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: 0.1 });
 
 document.querySelectorAll('.fade-section').forEach(sec => observer.observe(sec));
+
+// переключатель темы
+const themeToggle = document.getElementById('theme-toggle');
+if (themeToggle) {
+    const stored = localStorage.getItem('theme');
+    if (stored === 'dark') {
+        document.body.classList.add('dark');
+        themeToggle.textContent = '☀️';
+    }
+
+    themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
+        const isDark = document.body.classList.contains('dark');
+        themeToggle.textContent = isDark ? '☀️' : '🌙';
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+    });
+}
