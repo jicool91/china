@@ -1,0 +1,47 @@
+[
+  {
+    "title": "Великая китайская стена",
+    "image": "https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1350&q=80&fm=webp",
+    "description": "Маршрут вдоль самых живописных участков стены с ночевкой в гестхаусе под открытым небом.",
+    "price": 200,
+    "days": 2,
+    "season": "апрель-октябрь",
+    "type": "активный"
+  },
+  {
+    "title": "Запретный город",
+    "image": "https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1350&q=80&fm=webp",
+    "description": "История Пекина и прогулка по Императорскому дворцу с подъёмом на холм Цзиншань.",
+    "price": 150,
+    "days": 1,
+    "season": "круглый год",
+    "type": "культура"
+  },
+  {
+    "title": "Чжанцзяцзе",
+    "image": "https://images.unsplash.com/photo-1504274066651-8d431a536b11?auto=format&fit=crop&w=1350&q=80&fm=webp",
+    "description": "Национальный парк с подвесными мостами и видами, вдохновившими фильм «Аватар».",
+    "price": 350,
+    "days": 3,
+    "season": "сентябрь-ноябрь",
+    "type": "природа"
+  },
+  {
+    "title": "Гуйлинь и река Ли",
+    "image": "https://images.unsplash.com/photo-1562599934-e1b5f7947f32?auto=format&fit=crop&w=1350&q=80&fm=webp",
+    "description": "Сплав среди карстовых пиков и знакомство с деревнями рыбаков.",
+    "price": 300,
+    "days": 2,
+    "season": "март-май",
+    "type": "природа"
+  },
+  {
+    "title": "Шанхайский Бунд",
+    "image": "https://images.unsplash.com/photo-1504917595217-d4dc5ebe1146?auto=format&fit=crop&w=1350&q=80&fm=webp",
+    "description": "Ночная набережная и самые высокие небоскрёбы Китая в сердце мегаполиса.",
+    "price": 100,
+    "days": 1,
+    "season": "апрель-октябрь",
+    "type": "город"
+  }
+]

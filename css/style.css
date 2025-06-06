@@ -60,6 +60,20 @@ header.shrink .header-wrapper {
     padding: 1em 0;
 }
 
+.header-controls {
+    display: flex;
+    gap: 0.5em;
+    align-items: center;
+}
+
+.lang-toggle {
+    background: none;
+    border: none;
+    font-size: 1em;
+    cursor: pointer;
+    color: var(--primary);
+}
+
 .menu {
     list-style: none;
     margin: 0;
@@ -159,6 +173,19 @@ h2 {
     margin-bottom: 2em;
 }
 
+.filters {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 1em;
+    flex-wrap: wrap;
+}
+
+.filters label {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9em;
+}
+
 .routes article {
     background: var(--light);
     padding: 1em;
@@ -183,6 +210,33 @@ h2 {
     margin-bottom: 1em;
     padding-bottom: 1em;
     border-bottom: 1px solid #eee;
+}
+
+.review-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 400px;
+}
+
+.review-form input,
+.review-form textarea,
+.review-form select {
+    padding: 0.5em;
+    font-size: 1em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 400px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    padding: 0.5em;
+    font-size: 1em;
 }
 
 .details {

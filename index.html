@@ -23,7 +23,10 @@
                     <li><a href="#status">Статус</a></li>
                 </ul>
             </nav>
-            <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙</button>
+            <div class="header-controls">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Сменить язык">EN</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙</button>
+            </div>
         </div>
     </header>
 
@@ -65,58 +68,57 @@
         </section>
 
         <section id="routes" class="fade-section">
-            <h2>Топ 5 мест Китая</h2>
-            <div class="routes">
-                <article>
-                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9?auto=format&fit=crop&w=1350&q=80" alt="Великая китайская стена" loading="lazy">
-                    <h3>Великая китайская стена</h3>
-                    <p>Маршрут вдоль самых живописных участков стены с ночевкой в гестхаусе под открытым небом.</p>
-                    <p class="details">Цена: от 200$ · 2 дня · Лучший сезон: апрель-октябрь</p>
-                </article>
-                <article>
-                    <img src="https://images.unsplash.com/photo-1549880338-65ddcdfd017b?auto=format&fit=crop&w=1350&q=80" alt="Запретный город" loading="lazy">
-                    <h3>Запретный город</h3>
-                    <p>История Пекина и прогулка по Императорскому дворцу с подъёмом на холм Цзиншань.</p>
-                    <p class="details">Цена: от 150$ · 1 день · Лучший сезон: круглый год</p>
-                </article>
-                <article>
-                    <img src="https://images.unsplash.com/photo-1504274066651-8d431a536b11?auto=format&fit=crop&w=1350&q=80" alt="Чжанцзяцзе" loading="lazy">
-                    <h3>Чжанцзяцзе</h3>
-                    <p>Национальный парк с подвесными мостами и видами, вдохновившими фильм «Аватар».</p>
-                    <p class="details">Цена: от 350$ · 3 дня · Лучший сезон: сентябрь-ноябрь</p>
-                </article>
-                <article>
-                    <img src="https://images.unsplash.com/photo-1562599934-e1b5f7947f32?auto=format&fit=crop&w=1350&q=80" alt="Гуйлинь и река Ли" loading="lazy">
-                    <h3>Гуйлинь и река Ли</h3>
-                    <p>Сплав среди карстовых пиков и знакомство с деревнями рыбаков.</p>
-                    <p class="details">Цена: от 300$ · 2 дня · Лучший сезон: март-май</p>
-                </article>
-                <article>
-                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe1146?auto=format&fit=crop&w=1350&q=80" alt="Шанхайский Бунд" loading="lazy">
-                    <h3>Шанхайский Бунд</h3>
-                    <p>Ночная набережная и самые высокие небоскрёбы Китая в сердце мегаполиса.</p>
-                    <p class="details">Цена: от 100$ · 1 день · Лучший сезон: апрель-октябрь</p>
-                </article>
-            </div>
+            <h2>Топ мест Китая</h2>
+            <form id="filters" class="filters">
+                <label>
+                    Тип
+                    <select id="type-filter">
+                        <option value="">Все</option>
+                        <option value="активный">Активный</option>
+                        <option value="культура">Культура</option>
+                        <option value="природа">Природа</option>
+                        <option value="город">Город</option>
+                    </select>
+                </label>
+                <label>
+                    Дней
+                    <select id="days-filter">
+                        <option value="">Любая</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
+                <label>
+                    Бюджет
+                    <select id="price-filter">
+                        <option value="">Любой</option>
+                        <option value="150">до 150$</option>
+                        <option value="300">до 300$</option>
+                        <option value="500">до 500$</option>
+                    </select>
+                </label>
+            </form>
+            <div id="routes-container" class="routes"></div>
         </section>
 
         <section id="gallery" class="fade-section">
             <h2>Красивые места Китая</h2>
             <div class="gallery">
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1502882702947-51a1fb6f90b3?auto=format&fit=crop&w=1350&q=80" alt="Великая китайская стена" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1502882702947-51a1fb6f90b3?auto=format&fit=crop&w=1350&q=80&fm=webp" alt="Великая китайская стена" loading="lazy">
                     <figcaption>Великая китайская стена</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=1350&q=80" alt="Горы Чжанцзяцзе" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1504274066651-8d31a536b11a?auto=format&fit=crop&w=1350&q=80&fm=webp" alt="Горы Чжанцзяцзе" loading="lazy">
                     <figcaption>Чжанцзяцзе</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1579583766669-c3b1db55a4e5?auto=format&fit=crop&w=1350&q=80" alt="Гуйлинь и река Ли" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1579583766669-c3b1db55a4e5?auto=format&fit=crop&w=1350&q=80&fm=webp" alt="Гуйлинь и река Ли" loading="lazy">
                     <figcaption>Гуйлинь</figcaption>
                 </figure>
                 <figure>
-                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe1146?auto=format&fit=crop&w=1350&q=80" alt="Ночной Шанхай" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe1146?auto=format&fit=crop&w=1350&q=80&fm=webp" alt="Ночной Шанхай" loading="lazy">
                     <figcaption>Шанхай</figcaption>
                 </figure>
             </div>
@@ -130,6 +132,20 @@
             <article class="review">
                 <p>"Много красивых мест и понятные инструкции" — Иван, рейтинг 4/5</p>
             </article>
+            <form id="review-form" class="review-form">
+                <input type="text" id="review-name" placeholder="Ваше имя" required>
+                <textarea id="review-text" placeholder="Комментарий" required></textarea>
+                <label>Рейтинг
+                    <select id="review-rating">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </label>
+                <button type="submit">Оставить отзыв</button>
+            </form>
         </section>
 
         <section id="faq" class="fade-section">
@@ -154,6 +170,6 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>

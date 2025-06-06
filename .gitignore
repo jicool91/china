@@ -1,4 +1,2 @@
-# Ignore server logs
-server.log
-*.log
-
+node_modules
+/dist
