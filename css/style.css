@@ -90,30 +90,27 @@ h2 {
     margin-top: 0;
 }
 
-=======
-body {
-    font-family: Arial, sans-serif;
+/* Галерея изображений */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 1em;
+}
+
+.gallery img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.gallery figure {
     margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-    color: #333;
 }
-header, footer {
-    background-color: #ee3e38;
-    color: #fff;
-    padding: 1em;
+
+.gallery figcaption {
+    margin-top: 0.5em;
+    font-size: 0.9em;
     text-align: center;
-}
-main {
-    padding: 1em;
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-}
-section {
-    margin-bottom: 2em;
-}
-ul {
-    list-style-type: disc;
-    margin-left: 1.2em;
 }
