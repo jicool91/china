@@ -1,17 +1,17 @@
 :root {
-    --primary: #ee3e38;
-    --dark: #333;
+    --primary: #000; /* Apple-style черный цвет для текста */
+    --accent: #0071e3; /* характерный голубой оттенок Apple */
     --light: #fff;
-    --bg: #f7f7f7;
+    --bg: #f5f5f7; /* светло-серый фон как на apple.com */
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     background-color: var(--bg);
-    color: var(--dark);
+    color: var(--primary);
 }
 
 .container {
@@ -21,11 +21,12 @@ body {
 }
 
 header {
-    background-color: var(--primary);
-    color: var(--light);
+    background-color: var(--light);
+    color: var(--primary);
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
 .header-wrapper {
@@ -44,31 +45,31 @@ header {
 }
 
 .menu a {
-    color: var(--light);
+    color: var(--primary);
     text-decoration: none;
-    font-weight: 700;
+    font-weight: 600;
+    padding: 0.5em;
 }
 
 .menu a:hover {
-    text-decoration: underline;
+    color: var(--accent);
 }
 
 .hero {
     background: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
-    color: #fff;
+    color: var(--light);
     text-align: center;
-    padding: 5em 1em;
+    padding: 8em 1em;
 }
 
 .hero h2 {
-    margin: 0 0 0.5em;
-    font-size: 2em;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    margin: 0 0 0.3em;
+    font-size: 3em;
+    font-weight: 600;
 }
 
 .hero p {
-    font-size: 1.2em;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    font-size: 1.5em;
 }
 
 main {
@@ -113,4 +114,31 @@ h2 {
     margin-top: 0.5em;
     font-size: 0.9em;
     text-align: center;
+}
+
+/* Секция маршрутов */
+.routes {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 2em;
+    margin-bottom: 2em;
+}
+
+.routes article {
+    background: var(--light);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.routes img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.routes h3 {
+    margin: 0.5em 0;
+    font-size: 1.2em;
 }
