@@ -1,0 +1,8 @@
+{
+  "name": "mandarinways",
+  "version": "1.0.0",
+  "description": "Одностраничный сайт-визитка MandarinWays",
+  "scripts": {
+    "test": "echo \"No tests configured\""
+  }
+}
