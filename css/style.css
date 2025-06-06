@@ -29,6 +29,14 @@ header {
     box-shadow: 0 1px 3px rgba(0,0,0,0.1);
 }
 
+header .header-wrapper {
+    transition: padding 0.3s ease;
+}
+
+header.shrink .header-wrapper {
+    padding: 0.5em 0;
+}
+
 .header-wrapper {
     display: flex;
     justify-content: space-between;
@@ -80,6 +88,17 @@ main {
 
 section {
     margin-bottom: 2em;
+}
+
+.fade-section {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-section.visible {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 section:last-child {
@@ -141,4 +160,16 @@ h2 {
 .routes h3 {
     margin: 0.5em 0;
     font-size: 1.2em;
+}
+
+/* Отзывы */
+.review {
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+    border-bottom: 1px solid #eee;
+}
+
+.details {
+    font-size: 0.9em;
+    color: #555;
 }
