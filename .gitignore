@@ -1,0 +1,4 @@
+# Ignore server logs
+server.log
+*.log
+

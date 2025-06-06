@@ -1,2 +1,11 @@
-// Пока что логики нет, но файл подключён на случай дальнейшего расширения функциональности
 console.log('MandarinWays loaded');
+
+document.querySelectorAll('a[href^="#"]').forEach(link => {
+    link.addEventListener('click', function(e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+});

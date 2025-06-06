@@ -4,18 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MandarinWays — Готовые маршруты по Китаю</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header>
-        <h1>MandarinWays — Готовые маршруты по Китаю</h1>
+        <div class="container header-wrapper">
+            <h1 class="logo">MandarinWays</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#goal">Цель</a></li>
+                    <li><a href="#status">Статус</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <main>
+    <section class="hero">
+        <h2>Путешествуйте по Китаю самостоятельно</h2>
+        <p>Красивые и продуманные маршруты для вашего идеального отпуска</p>
+    </section>
+
+    <main class="container">
         <section id="about">
             <h2>О проекте</h2>
-            <p><strong>MandarinWays</strong> — это проект одностраничного сайта-визитки, где путешественники смогут приобрести тщательно составленные маршруты для самостоятельных поездок по Китаю.</p>
-            <p>Репозиторий содержит исходный код сайта, на котором будут размещаться готовые маршруты путешествий по Китаю. Каждый маршрут — это самостоятельный тур продолжительностью от 3 до 14 дней.</p>
+            <p><strong>MandarinWays</strong> — это одностраничный сайт-визитка, где путешественники могут приобрести тщательно составленные маршруты для самостоятельных поездок по Китаю.</p>
+            <p>Репозиторий содержит исходный код сайта, на котором размещаются готовые маршруты путешествий по Китаю. Каждый маршрут — самостоятельный тур продолжительностью от 3 до 14 дней.</p>
             <ul>
                 <li>живописные достопримечательности</li>
                 <li>удобные отели с лучшим соотношением цена/качество</li>
@@ -50,7 +67,9 @@
     </main>
 
     <footer>
-        <p>&copy; MandarinWays</p>
+        <div class="container">
+            <p>&copy; MandarinWays</p>
+        </div>
     </footer>
 
     <script src="js/main.js"></script>
