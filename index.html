@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MandarinWays — Готовые маршруты по Китаю</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="container header-wrapper">
+            <h1 class="logo">MandarinWays</h1>
+            <nav>
+                <ul class="menu">
+                    <li><a href="#about">О проекте</a></li>
+                    <li><a href="#features">Особенности</a></li>
+                    <li><a href="#goal">Цель</a></li>
+                    <li><a href="#routes">Маршруты</a></li>
+                    <li><a href="#gallery">Места</a></li>
+                    <li><a href="#reviews">Отзывы</a></li>
+                    <li><a href="#faq">FAQ</a></li>
+                    <li><a href="#status">Статус</a></li>
+                </ul>
+            </nav>
+            <div class="header-controls">
+                <button id="lang-toggle" class="lang-toggle" aria-label="Сменить язык">EN</button>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Переключить тему">🌙</button>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <h2>Путь Мандарина</h2>
+        <p>Авторские туры по Китаю, собранные с любовью</p>
+        <a href="#routes" class="cta-btn">Посмотреть маршруты</a>
+    </section>
+
+    <main class="container">
+        <section id="featured" class="fade-section">
+            <h2>Маршрут недели</h2>
+            <div class="featured-route">
+                <img id="featured-image" alt="Маршрут недели">
+                <div class="featured-info">
+                    <h3 id="featured-title"></h3>
+                    <p id="featured-desc"></p>
+                    <p class="details" id="featured-price"></p>
+                    <a href="#" class="cta-btn">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="about" class="fade-section">
+            <h2>О проекте</h2>
+            <p><strong>MandarinWays</strong> — это одностраничный сайт-визитка, где путешественники могут приобрести тщательно составленные маршруты для самостоятельных поездок по Китаю.</p>
+            <p>Репозиторий содержит исходный код сайта, на котором размещаются готовые маршруты путешествий по Китаю. Каждый маршрут — самостоятельный тур продолжительностью от 3 до 14 дней.</p>
+            <ul>
+                <li>живописные достопримечательности</li>
+                <li>удобные отели с лучшим соотношением цена/качество</li>
+                <li>логичное расположение точек на маршруте</li>
+                <li>акцент на комфорт, визуальную эстетику и локальные впечатления</li>
+            </ul>
+        </section>
+
+        <section id="features" class="fade-section">
+            <h2>Особенности маршрутов</h2>
+            <ul>
+                <li>разные форматы поездок: прогулочные, активные, с детьми, с уклоном в культуру или природу</li>
+                <li>поддержка бюджета: от базовых вариантов до комфортного уровня</li>
+                <li>маршруты обновляются регулярно с учётом сезона, новых открытий и отзывов</li>
+            </ul>
+        </section>
+
+        <section id="goal" class="fade-section">
+            <h2>Цель</h2>
+            <p>Сделать путешествие по Китаю доступным, логичным и красивым без необходимости в турагентствах. Каждый маршрут — это:</p>
+            <ul>
+                <li>готовый план по дням</li>
+                <li>бронируемые отели</li>
+                <li>всё удобно, пошагово и без стресса</li>
+            </ul>
+        </section>
+
+        <section id="how" class="fade-section">
+            <h2>Как это работает</h2>
+            <div class="how-steps">
+                <div>Выбираете маршрут</div>
+                <div>Оплачиваете онлайн</div>
+                <div>Получаете PDF-гид</div>
+                <div>Едете!</div>
+            </div>
+        </section>
+
+        <section id="routes" class="fade-section">
+            <h2>Топ мест Китая</h2>
+            <form id="filters" class="filters">
+                <label>
+                    Тип
+                    <select id="type-filter">
+                        <option value="">Все</option>
+                        <option value="активный">Активный</option>
+                        <option value="культура">Культура</option>
+                        <option value="природа">Природа</option>
+                        <option value="город">Город</option>
+                    </select>
+                </label>
+                <label>
+                    Дней
+                    <select id="days-filter">
+                        <option value="">Любая</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                    </select>
+                </label>
+                <label>
+                    Бюджет
+                    <select id="price-filter">
+                        <option value="">Любой</option>
+                        <option value="150">до 150$</option>
+                        <option value="300">до 300$</option>
+                        <option value="500">до 500$</option>
+                    </select>
+                </label>
+            </form>
+            <div id="routes-container" class="routes"></div>
+        </section>
+
+        <section id="gallery" class="fade-section">
+            <h2>Красивые места Китая</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="data:image/webp;base64,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"" alt="Великая китайская стена" loading="lazy">
+                    <figcaption>Великая китайская стена</figcaption>
+                </figure>
+                <figure>
+                    <img src="data:image/webp;base64,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" alt="Горы Чжанцзяцзе" loading="lazy">
+                    <figcaption>Чжанцзяцзе</figcaption>
+                </figure>
+                <figure>
+                    <img src="data:image/webp;base64,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"" alt="Гуйлинь и река Ли" loading="lazy">
+                    <figcaption>Гуйлинь</figcaption>
+                </figure>
+                <figure>
+                    <img src="data:image/webp;base64,UklGRjoHAABXRUJQVlA4IC4HAACwlQCdASogA1gCPpFIok0lpKMiIHgICLASCWlu4XdhG7PUsflbQ+mTcsCA5+6gFWUjxm7z3JukXOtHjN3nuTdIudaPGbvPcQ4h1VJsmIdVSbJiHVUmyYh1VJsmIdaLR4zd57k3SLnWjxm7z3JukXOtHjN3nuTdIubw/VQCrKR4zd57k3SLnWjxm7z3JukXOtHjN3nq4aRc60eM3ee5N0i51o8Zu89ybpFzrR4zd57kv6bvPcm6Rc60eM3ee5N0i51o8Zu89ybpFzrR4j0E3JukXOtHjN3nuTdIudaPGbvPcm6Rc60eM28FybpFzrR4zd57k3SLnWjxm7z3JukXOtHjN3mj38Zu89ybpFzrR4zd57k3SLnWjxm7z3JukXOqpqoBVlI8Zu89ybpFzrR4zd57k3SLnWjxm7z3EuM3ee5N0i51o8Zu89ybpFzrR4zd57k3SLnWjm53nuTdIudaPGbvPcm6Rc60eM3ee5N0i51o8ZXybk3SLnWjxm7z3JukXOtHjN3nuTdIudaPGbuc5N0i51o8Zu89ybpFzrR4zd57k3SLnWjxm7z1RMQ6qk2TEOqpNkxDqqTZMQ6qk2TEPE60eM3ee5N0i51o8Zu89ybpFzrR4zd57k3SLedUWUAqykeM3ee5N0i51o8Zu89ybpFzrR4zd5o9/GbvPcm6Rc60Z8AU82IEdlvEaxnwBTgBoABgI789ybpFzrR4zdznJukXOtHjN3ntzgsDsSC0J7luSzQsgHZeZ5DRPWA6D4IdAASMRIUFicECK0o5zUAk80Ry/iFXr2q5MbSNX21QhLECw+M5kLQTLeQ7xzM3YhWUjxm7z3JukXN4fqoBVlI8Zu89ucOFANr2dLTTnCrJBsjY5IbwSZZBs9o4n7xorBYK+p3AZZTfbhXkc7FbgB9zMAVmtQVcanpG6wQhcXVhnLRXcLZSPGbvPcm6Rc3MtejLxHLXo2MJW6VpIlL5kXfApQQ1VJsmIdVVAWUAqykeM3ee5N0i5zet1AKspHjN3nuTdIubw/VQCrKR4zd57k3SLnWjxm7z3JukXOtHjN3nq4aRc60eM3ee5N0i51o8Zu89ybpFzrR4zd57kv6bvPcm6Rc60eM3ee5N0i51o8Zu89ybpFzrR4j0E3JukXOtHjN3nuTdIudaPGbvPcm6Rc60eM24nHIIaqk2TEOqpNkxDqqTZMQ6qk2TMvBNybpFzrR4zd57k3SLnWjxm7z3JukXOtHjK+Tcm6Rc60eM3ee5N0i51o8Zu89ybpFzrR4zdznJukXOtHjN3nuTdIudaPGbvPcm6Rc60eM3eerhpFzrR4zd57k3SLnWjxm7z3JukXOtHjN3nuS/pu89ybpFzrR4zd57k3SLnWjxm7z3JukXOtHiPQTcm6Rc60eM3ee5N0i51o8Zu89ybpFzrR4zbwXJukXOtHjN3nuTdIudaPGbvPcm6Rc60eM3eaPfxm7z3JukXOtHjN3nuTdIudaPGbvPcm6Rc6qmqgFWUjxm7z3JukXOtHjN3nuTdIudaPGbvPcS4zd57k3SLnWjxm7z3JukXOtHjN3nuTdIudaObnee5N0i51o8Zu89ybpFzrR4zd57k3SLnWjxiQAA/v+/xpoDKgbsHfB/QpKAyCAv4N0QEGBDwRgEhBKYAA4vSQPCaBKZVxq4UF598ev/NH7Gznz497ZPIKsWBexWGyyV5ra+14pukXbJ3fVlaaxl9OV5kYdA7NleFPlmzcB9q9YY4VSW+53KPmxzhyR3Mr6gKRclOpzcTsH+v9ruzfiULT/lsCB5yxd9bmKkGg5gzpRDdovFUiFulD/TKQGiGp6Uu4U1DJp3/KzjRXhEnsv9b4q+mRcadX2YpctE+vWg+llhYU7L9rmZqlxYEyvr3Rd7mYMtGMaO2+AfBcERXpqKfWdWuBP01BqhyZZ0oO3wgx9pR7fWhbhPsgCOCjUAyDGlIwe/rxm31ic95N7C2N0AUsbarwQYMHNH3p7mHMWM9zacH81wGyBqO9XO31l1T9GboGB1rvEIQNnW2cVZZPRXtJ6M2PpXz32oh/bo7A+a1/0f49Xz/pfnEDL273+0080kznM/1/XCIw8WZfjfNwHtZ3rLOmTdm+IWIiCLDj9Op1tnts1pZkY81UQZ47ocJs1foAc0dQikPaVwMXjw/XOg2wajxvdEkSZSx4PqwhjULlZTAB4Q6RH9kRqB6YRWlW6D+giTFpBOI7QKGn7LyIfp8iXv8lx1gMKQkgnx82stX/is9NAF0yif9OSSYH9EppnQXSNjeccei6Yohk0CNxO6GqRU/t1qGBCOISnjqS/3sjLHZULLCvK2wcMf6P4kHTK3wi8jDVWehbC2L4aAQUvYPqUS+ntibfsArNmGE6uCxRBiUAAok3Z9d+JKzE9TeespAG5FBQ0BkEB20CXRQRuCUwmAJsCeAxiAv4L4C8guYLgC2gAAAA=="" alt="Ночной Шанхай" loading="lazy">
+                    <figcaption>Шанхай</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="reviews" class="fade-section">
+            <h2>Отзывы путешественников</h2>
+            <article class="review">
+                <p>"Отличный маршрут! Всё чётко и удобно" — Анна, рейтинг 5/5</p>
+            </article>
+            <article class="review">
+                <p>"Много красивых мест и понятные инструкции" — Иван, рейтинг 4/5</p>
+            </article>
+            <form id="review-form" class="review-form">
+                <input type="text" id="review-name" placeholder="Ваше имя" required>
+                <textarea id="review-text" placeholder="Комментарий" required></textarea>
+                <label>Рейтинг
+                    <select id="review-rating">
+                        <option value="5">5</option>
+                        <option value="4">4</option>
+                        <option value="3">3</option>
+                        <option value="2">2</option>
+                        <option value="1">1</option>
+                    </select>
+                </label>
+                <button type="submit">Оставить отзыв</button>
+            </form>
+        </section>
+
+        <section class="fade-section cta-block">
+            <a href="#routes" class="cta-btn">Выбрать свой маршрут</a>
+        </section>
+
+        <section id="faq" class="fade-section">
+            <h2>FAQ</h2>
+            <dl>
+                <dt>Как оплатить маршрут?</dt>
+                <dd>После выбора вы сможете оплатить картой или через PayPal.</dd>
+                <dt>Могу ли я изменить даты?</dt>
+                <dd>Да, вы можете скорректировать маршрут под свои даты поездки.</dd>
+            </dl>
+        </section>
+
+        <section id="status" class="fade-section">
+            <h2>Статус</h2>
+            <p>Проект в активной разработке. Сайт и маршруты будут постепенно добавляться по мере готовности.</p>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-content">
+            <nav class="footer-links">
+                <a href="#about">О нас</a>
+                <a href="#routes">Все маршруты</a>
+                <a href="contact.html">Поддержка</a>
+                <a href="contact.html">Контакты</a>
+                <a href="#">Политика</a>
+            </nav>
+            <div class="footer-lang">RU | EN | 中文</div>
+        </div>
+    </footer>
+
+    <script src="dist/bundle.js"></script>
+</body>
+</html>
