@@ -58,6 +58,17 @@ if (routesContainer) {
         .then(data => {
             routesData = data;
             renderRoutes(data);
+            const feat = data[0];
+            if (feat) {
+                const img = document.getElementById('featured-image');
+                const title = document.getElementById('featured-title');
+                const desc = document.getElementById('featured-desc');
+                const price = document.getElementById('featured-price');
+                if (img) img.src = feat.image;
+                if (title) title.textContent = feat.title;
+                if (desc) desc.textContent = feat.description;
+                if (price) price.textContent = `от ${feat.price}$`;
+            }
         });
 
     const typeF = document.getElementById('type-filter');
@@ -109,18 +120,18 @@ if (reviewForm) {
 const translations = {
     en: {
         menu: ['About', 'Features', 'Goal', 'Routes', 'Places', 'Reviews', 'FAQ', 'Status'],
-        heroTitle: 'Travel China on your own',
-        heroText: 'Beautiful itineraries for the perfect holiday'
+        heroTitle: 'Mandarin Path',
+        heroText: 'Curated tours across China'
     },
     zh: {
         menu: ['关于', '特色', '目标', '路线', '地点', '评价', 'FAQ', '状态'],
-        heroTitle: '自助游中国',
-        heroText: '为完美假期准备的精彩行程'
+        heroTitle: '橘子之路',
+        heroText: '精心策划的中国旅行线路'
     },
     ru: {
         menu: ['О проекте', 'Особенности', 'Цель', 'Маршруты', 'Места', 'Отзывы', 'FAQ', 'Статус'],
-        heroTitle: 'Путешествуйте по Китаю самостоятельно',
-        heroText: 'Красивые и продуманные маршруты для вашего идеального отпуска'
+        heroTitle: 'Путь Мандарина',
+        heroText: 'Авторские туры по Китаю, собранные с любовью'
     }
 };
 const langBtn = document.getElementById('lang-toggle');
