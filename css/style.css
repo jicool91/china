@@ -326,3 +326,25 @@ body.dark .review {
 .footer-links a:hover {
     color: var(--accent);
 }
+
+/* кнопка прокрутки наверх */
+.scroll-top {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    font-size: 1.2em;
+    cursor: pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-top.show {
+    display: flex;
+}
