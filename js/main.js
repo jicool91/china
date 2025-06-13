@@ -161,3 +161,18 @@ function applyLang(lang) {
         langBtn.textContent = 'RU';
     }
 }
+
+// кнопка "наверх"
+const scrollBtn = document.getElementById('scroll-top');
+if (scrollBtn) {
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 400) {
+            scrollBtn.classList.add('show');
+        } else {
+            scrollBtn.classList.remove('show');
+        }
+    });
+    scrollBtn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+}
