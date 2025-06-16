@@ -5,6 +5,15 @@
     --bg: #f5f5f7; /* светло-серый фон как на apple.com */
 }
 
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 body.dark {
     --primary: #fff;
     --accent: #0a84ff;
@@ -87,6 +96,16 @@ header.shrink .header-wrapper {
     gap: 1em;
 }
 
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto;
+    color: var(--primary);
+}
+
 .menu a {
     color: var(--primary);
     text-decoration: none;
@@ -103,6 +122,11 @@ header.shrink .header-wrapper {
     color: #fff;
     text-align: center;
     padding: 8em 1em;
+}
+
+.hero-inner {
+    max-width: 960px;
+    margin: 0 auto;
 }
 
 .hero h2 {
@@ -350,6 +374,18 @@ body.dark .review {
 }
 
 /* Мобильная адаптация */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    .main-nav {
+        display: none;
+    }
+    .main-nav.open {
+        display: block;
+    }
+}
+
 @media (max-width: 600px) {
     .header-wrapper {
         flex-direction: column;
