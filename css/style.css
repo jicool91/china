@@ -348,3 +348,39 @@ body.dark .review {
 .scroll-top.show {
     display: flex;
 }
+
+/* Мобильная адаптация */
+@media (max-width: 600px) {
+    .header-wrapper {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5em;
+    }
+    .menu {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+    .hero {
+        padding: 5em 1em;
+    }
+    .hero h2 {
+        font-size: 2em;
+    }
+    .hero p {
+        font-size: 1em;
+    }
+    .featured-route {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .gallery {
+        grid-template-columns: 1fr;
+    }
+    .routes {
+        grid-template-columns: 1fr;
+    }
+    .how-steps {
+        flex-direction: column;
+        gap: 0.5em;
+    }
+}
