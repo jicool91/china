@@ -500,3 +500,24 @@ details summary {
 .itinerary-item h3 {
     margin-top: 0;
 }
+
+/* кнопка Домой для страницы тура */
+.home-btn {
+    position: fixed;
+    bottom: 1.5em;
+    right: 1.5em;
+    background-color: var(--accent);
+    color: #fff;
+    border-radius: 50%;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-btn svg {
+    width: 1.4em;
+    height: 1.4em;
+    fill: currentColor;
+}
