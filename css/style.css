@@ -88,6 +88,12 @@ header.shrink .header-wrapper {
     color: var(--primary);
 }
 
+/* ссылка-логотип */
+.logo a {
+    text-decoration: none;
+    color: inherit;
+}
+
 .menu {
     list-style: none;
     margin: 0;
@@ -501,23 +507,3 @@ details summary {
     margin-top: 0;
 }
 
-/* кнопка Домой для страницы тура */
-.home-btn {
-    position: fixed;
-    bottom: 1.5em;
-    right: 1.5em;
-    background-color: var(--accent);
-    color: #fff;
-    border-radius: 50%;
-    width: 2.5em;
-    height: 2.5em;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.home-btn svg {
-    width: 1.4em;
-    height: 1.4em;
-    fill: currentColor;
-}
