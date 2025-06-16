@@ -420,3 +420,54 @@ body.dark .review {
         gap: 0.5em;
     }
 }
+.messenger-links {
+    display: flex;
+    gap: 0.5em;
+}
+.messenger-icon svg {
+    width: 24px;
+    height: 24px;
+    fill: var(--primary);
+}
+.messenger-icon:hover svg {
+    fill: var(--accent);
+}
+.tour-hero {
+    background: url('https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+}
+details {
+    background: var(--light);
+    border-radius: 8px;
+    padding: 0.8em;
+    margin-bottom: 0.6em;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+details summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+.about {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+    max-width: 600px;
+    margin: 2em auto;
+}
+.about img {
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.fixed-cta {
+    display: inline-block;
+}
+@media (max-width: 600px) {
+    .fixed-cta {
+        position: fixed;
+        bottom: 1em;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+    }
+}
