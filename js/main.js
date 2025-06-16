@@ -20,6 +20,15 @@ window.addEventListener('scroll', () => {
     }
 });
 
+// мобильное меню
+const menuToggle = document.getElementById('menu-toggle');
+const mainNav = document.querySelector('.main-nav');
+if (menuToggle && mainNav) {
+    menuToggle.addEventListener('click', () => {
+        mainNav.classList.toggle('open');
+    });
+}
+
 // появление секций при скролле
 const observer = new IntersectionObserver(entries => {
     entries.forEach(entry => {
