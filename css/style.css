@@ -433,7 +433,19 @@ body.dark .review {
     fill: var(--accent);
 }
 .tour-hero {
+    position: relative;
     background: url('https://images.unsplash.com/photo-1507149833265-60c372daea22?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+    color: #fff;
+}
+.tour-hero::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.4);
+}
+.tour-hero .hero-inner {
+    position: relative;
+    z-index: 1;
 }
 details {
     background: var(--light);
@@ -470,4 +482,21 @@ details summary {
         transform: translateX(-50%);
         z-index: 10;
     }
+}
+
+.itinerary {
+    display: grid;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+
+.itinerary-item {
+    background: var(--light);
+    padding: 1em;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.itinerary-item h3 {
+    margin-top: 0;
 }
